@@ -27,9 +27,25 @@ let myModel = myCar.show();
 
 const hello = (val) => 'Hello ' + val;
 
+// class Header {
+//     constructor() {
+//         this.color = "Red";
+//     }
+
+//     // Regular function
+//     changeColor = function () {
+//         document.getElementById("demo")
+//     }
+// }
+
+let renderMe = [];
+renderMe.push(myFirstElement, myModel, <br></br>, hello('World!'));
+
 ReactDOM.render(
     // (myFirstElement,
-    // myModel),
-    hello("world!"),
+    // myModel,
+    // // hello("world!"),
+    // <p>Hello</p>),
+    renderMe,
     document.getElementById('root')
 );
