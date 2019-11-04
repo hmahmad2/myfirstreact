@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const myFirstElement = <h1>Hello React!</h1>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class Car {
+    constructor(name) {
+        this.brand = name;
+    }
+    present() {
+        return 'I have a ' + this.brand;
+    }
+}
+
+class Model extends Car {
+    constructor(name, mod) {
+        super(name);
+        this.model = mod;
+    }
+    show() {
+        return this.present() + ', it is a ' + this.model;
+    }
+}
+
+let myCar = new Model('Ford', "Mustang");
+let myModel = myCar.show();
+
+const hello = (val) => 'Hello ' + val;
+
+ReactDOM.render(
+    // (myFirstElement,
+    // myModel),
+    hello("world!"),
+    document.getElementById('root')
+);
