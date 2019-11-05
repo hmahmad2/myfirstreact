@@ -100,6 +100,41 @@ const comment = {
   },
 };
 
+// to write HTML on multiple lines, use () parentheses
+// const myelement = (
+//   <table>
+//     <tr>
+//       <th>Name</th>
+//     </tr>
+//     <tr>
+//       <td>John</td>
+//     </tr>
+//     <tr>
+//       <td>Elsa</td>
+//     </tr>
+//   </table>
+// );
+
+// write expressions inside {} curly braces via JSX.
+// const myelement = <h1>React is {5 + 5} times better with... JSX</h1>
+
+// wrap HTML code inside one parent element
+// const myelement = (
+//   <div>
+//     <h1>I am a header</h1>
+//     <p>I am a paragraph</p>
+//     <p><strong>I am powerful grr</strong></p>
+//   </div>
+// );
+
+// close HTML elements properly. Close empty elements with />
+const myelement = (
+  <div>
+    <h4>insert text here</h4>
+    <input type="text" />
+  </div>
+);
+
 ReactDOM.render(
     // (myFirstElement,
     // myModel,
@@ -107,10 +142,11 @@ ReactDOM.render(
     // <p>Hello</p>),
     // renderMe,
     // <App />,
-    <Comment
-      date={comment.date}
-      text={comment.text}
-      author={comment.author}
-    />,
+    // {/* <Comment
+    //   date={comment.date}
+    //   text={comment.text}
+    //   author={comment.author}
+    // />, */}
+    myelement,
     document.getElementById('root')
 );
