@@ -1,4 +1,5 @@
-// import React, { Component } from 'react';
+import React from 'react';
+// import ReactDOM from 'react-dom';
 // // import logo from './logo.svg';
 // // import './App.css';
 
@@ -12,4 +13,12 @@
 //   }
 // }
 
+class Car extends React.Component {
+    render() {
+        return <h2>Hi, I am a Car!</h2>;
+    }
+}
+
 // export default App;
+// This component, we will use in another file. Hence the export
+export default Car;
