@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 // // import logo from './logo.svg';
 // // import './App.css';
@@ -13,9 +13,14 @@ import React from 'react';
 //   }
 // }
 
-class Car extends React.Component {
+class Car extends Component {
+    constructor (props) {
+        super(props);
+    }
     render() {
-        return <h2>Hi, I am a {this.props.brand} Car!</h2>;
+        // Implies that brand is an object in and of itself
+        // return <h2>Hi, I am a {this.props.brand.model} Car!</h2>;
+        return <h2>Hi, I am a {this.props.model} Car!</h2>;
     }
 }
 
