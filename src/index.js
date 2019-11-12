@@ -1,21 +1,33 @@
 import React , { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Car from './App.js';
+// import Car from './App.js';
 
-// class Car extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         // keep the properties of the component in the state
-//         // this.state = {
-//         //     color: "red"
-//         // };
-//     }
+class Car extends Component {
+    constructor(props) {
+        super(props);
+        // keep the properties of the component in the state
+        this.state = {
+            brand: "Ford",
+            model: "Mustang",
+            color: "red",
+            year: 1964
+        };
+    }
     
-//     render () {
-//         // return <h2>Hi, I am a {this.props.color} Car!</h2>;
-//         return <h2>I am a Car!</h2>;
-//     }
-// }
+    render () {
+        // return <h2>Hi, I am a {this.props.color} Car!</h2>;
+        return  (
+            <div>
+                <h1>My {this.state.brand}</h1>
+                <p>
+                    It is a {this.state.color + " "} 
+                    {this.state.model + " "}
+                    from {this.state.year}.
+                </p>
+            </div>
+        );
+    }
+}
 
 // class Garage extends React.Component {
 //     render() {
